@@ -8,7 +8,7 @@ const mysql = require('mysql');
 
 
 const db = mysql.createConnection ({
-  host: 'localhost',
+  host: '127.0.0.1',
   user: 'root',
   password: '',
   database: 'ibm_test_db'
@@ -56,3 +56,5 @@ _server.get('/retoibm/sumar/:sumando01/:sumando02', function(request, response) 
 _server.listen(_port, () => {
    console.log(`Server listening at ${_port}`);
 });
+
+module.exports = _server;
